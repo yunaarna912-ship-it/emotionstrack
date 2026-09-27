@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi Atas -->
+    <nav class="navbar">
+        <div class="logo">Perfect Day</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+        <h1>Hello!!!!</h1>
+        <h3>How are you today?</h3>
+        <h3>Today you feel...</h3>
+
+        <!-- Pilihan Emoji Mood -->
+        <div class="emoji-container">
+            <button data-mood="positive" onclick="tampilkanPesan('Awesome! keep up the great spirit for the future! 😎', 'positive', this)">
+                <span class="emoji">😁</span>
+                <span class="label">rad</span>
+            </button>
+            <button data-mood="positive" onclick="tampilkanPesan('Good day, continue your day yeah! 😊', 'positive', this)">
+                <span class="emoji">🙂</span>
+                <span class="label">good</span>
+            </button>
+            <button data-mood="neutral" onclick="tampilkanPesan('A bad day? thats okay, try doing something yeah! 🤗', 'neutral', this)">
+                <span class="emoji">😐</span>
+                <span class="label">meh</span>
+            </button>
+            <button data-mood="negative" onclick="tampilkanPesan('I hope your day gets better... 🙁', 'negative', this)">
+                <span class="emoji">🙁</span>
+                <span class="label">bad</span>
+            </button>
+            <button data-mood="negative" onclick="tampilkanPesan('Its been a tough day, huh? Lets take a break for a while, okey?! 🤗', 'negative', this)">
+                <span class="emoji">😫</span>
+                <span class="label">awful</span>
+            </button>
+        </div>
+
+        <!-- Wadah Teks Pesan -->
+        <p id="hasil-pesan" class="pesan-box"></p>
+
+        <!-- Generator Ide Perfect Day -->
+        <div class="ide-section">
+            <h3 class="ide-heading">Need ideas for a more perfect day?</h3>
+
+            <div class="kategori-container">
+                <button class="chip active" data-kategori="semua" onclick="pilihKategori('semua', this)">All</button>
+                <button class="chip" data-kategori="outdoor" onclick="pilihKategori('outdoor', this)">Outdoor</button>
+                <button class="chip" data-kategori="indoor" onclick="pilihKategori('indoor', this)">Indoor</button>
+                <button class="chip" data-kategori="sosial" onclick="pilihKategori('sosial', this)">With friend</button>
+                <button class="chip" data-kategori="sendiri" onclick="pilihKategori('sendiri', this)">Alone</button>
+            </div>
+
+            <button class="btn-random" onclick="cariIdeSempurna()">Looking for ideas</button>
+            <p id="pesan-random" class="pesan-random-box"></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
